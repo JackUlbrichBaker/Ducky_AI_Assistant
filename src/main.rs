@@ -177,7 +177,7 @@ fn draw_main_menu(f: &mut ratatui::Frame, app: &App) {
         .direction(Direction::Vertical)
         .constraints(
             [
-                Constraint::Length(25), // header
+                Constraint::Length(15), // header
                 Constraint::Min(6),     // menu
                 Constraint::Length(3),  // footer
             ]
@@ -185,7 +185,7 @@ fn draw_main_menu(f: &mut ratatui::Frame, app: &App) {
         )
         .split(size);
 
-    let header = Paragraph::new(ascii_art_cached("Ducky", "alligator", Color::Red))
+    let header = Paragraph::new(ascii_art_cached("Ducky", "alligator", Color::LightMagenta))
         .alignment(Alignment::Center)
         .wrap(Wrap { trim: false });
 
